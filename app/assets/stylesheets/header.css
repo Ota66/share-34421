@@ -1,0 +1,47 @@
+.heaher {
+  background-color: #cfdbec;
+  width: 100vw;
+  padding: 2vh 15vw;
+  display: flex;
+}
+
+.type-icon {
+  font-size: 50px;
+  text-decoration: none;
+  color: #000;
+}
+
+.nav {
+  justify-content: flex-end;
+  margin: 25px 0 25px 550px;
+}
+
+.list {
+  display: flex;
+  text-align: center;
+}
+
+.user-nickname {
+  font-size: 25px;
+  text-decoration: none;
+  color: #000;
+}
+
+.logout {
+  font-size: 25px;
+  text-decoration: none;
+  color: #000;
+}
+
+.login {
+  font-size: 25px;
+  text-decoration: none;
+  color: #000;
+  margin-right: 20px;
+}
+
+.sign-up {
+  font-size: 25px;
+  text-decoration: none;
+  color: #000;
+}
