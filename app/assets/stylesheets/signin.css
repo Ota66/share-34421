@@ -1,0 +1,77 @@
+.box {
+  width: 400px;
+  height: 530px;
+  margin: 130px auto 145px;
+  border-radius: 8px;
+  border: 1px #ddd solid;
+  background-color: #e7e7e7;
+}
+
+.box-inner {
+  padding: 20px 26px;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  padding-bottom: 4px;
+  color: #111111;
+  text-align: center;
+}
+
+.form-nickname {
+  margin-bottom: 13px;
+}
+
+.form-email, .form-password, .form-password-confirmation {
+  margin-bottom: 22px;
+}
+
+.form-nickname label, .form-email label, .form-password label, .form-password-confirmation label {
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.form-nickname input[type="text"], .form-email input[type="email"], .form-password input[type="password"], .form-password-confirmation input[type="password"] {
+  width: 100%;
+  height: 31px;
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+  padding: 0 7px;
+  background-color: #ffffff;
+}
+
+.box-login input[type="submit"] {
+  width: 100%;
+  height: 33px;
+  background: linear-gradient(to bottom,#f7dcc2,#f7aa05);
+  border-radius: 3px;
+  border: 1px #a88734 solid;
+}
+
+.info-text {
+  color: #8d8d8d;
+}
+
+.box-newusr p {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.box-newusr a {
+  display: block;
+  width: 100%;
+  height: 31px;
+  font-size: 13px;
+  margin-top: 40px;
+  color: #111;
+  line-height: 31px;
+  text-align: center;
+  background: linear-gradient(to bottom,#f7f8fa,#e7e9ec);
+  border-radius: 3px;
+  border: 1px #a2a6ac solid;
+}
+
+
