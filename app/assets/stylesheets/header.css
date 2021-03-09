@@ -8,40 +8,69 @@
 .type-icon {
   font-size: 50px;
   text-decoration: none;
-  color: #000;
+  color: rgb(10, 51, 235);
+  font-family: fantasy;
+  margin-top: 10px;
 }
 
 .nav {
   justify-content: flex-end;
-  margin: 25px 0 25px 550px;
+  margin: 25px 0 25px 320px;
 }
 
 .list {
   display: flex;
-  text-align: center;
-}
-
-.user-nickname {
-  font-size: 25px;
-  text-decoration: none;
-  color: #000;
-}
-
-.logout {
-  font-size: 25px;
-  text-decoration: none;
-  color: #000;
 }
 
 .login {
   font-size: 25px;
   text-decoration: none;
-  color: #000;
-  margin-right: 20px;
+  color: #1618bd;
+  border: 3px solid #1618bd;
+  border-radius: 6px;
+  background-color: rgb(255, 254, 254);
+  padding: 10px;
 }
 
 .sign-up {
   font-size: 25px;
   text-decoration: none;
-  color: #000;
+  color: #1618bd;
+  margin-left: 50px;
+  border: 3px solid #1618bd;
+  border-radius: 6px;
+  background-color: rgb(255, 254, 254);
+  padding: 10px;
+}
+
+.logout {
+  font-size: 25px;
+  text-decoration: none;
+  color: #1618bd;
+  border: 3px solid #1618bd;
+  border-radius: 6px;
+  background-color: rgb(255, 254, 254);
+  padding: 10px;
+}
+
+.user-nickname {
+  font-size: 25px;
+  text-decoration: none;
+  color: #1618bd;
+  margin-right: 30px;
+  border: 3px solid #1618bd;
+  border-radius: 6px;
+  background-color: rgb(255, 254, 254);
+  padding: 10px;
+}
+
+.post {
+  font-size: 25px;
+  text-decoration: none;
+  color: #1618bd;
+  margin-right: 30px;
+  border: 3px solid #1618bd;
+  border-radius: 6px;
+  background-color: rgb(255, 254, 254);
+  padding: 10px;
 }
