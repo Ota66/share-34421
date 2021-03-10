@@ -1,0 +1,26 @@
+<%= render "shared/header" %>
+
+<div class="contents">
+<ul class='tweet-lists'>
+    <li class='tweet-list1'>
+        <div class="upper-content">
+          <div class="content-user">
+            <%= @tweet.user.nickname %>
+          </div>
+          <div class="content-date">
+            <%= @tweet.created_at %>
+          </div>
+        </div>
+        <div class="lower-content">
+          <div class="content-tweet">
+            <%= @tweet.text %>
+          </div>
+          <%= image_tag @tweet.image.variant(resize: '450x450'), class: 'tweet-image' if @tweet.image.attached? %>
+        </div>
+    </li>
+    <div class="margin"></div>
+</ul>
+</div>
+
+
+<%= render "shared/footer" %>
