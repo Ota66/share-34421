@@ -2,7 +2,7 @@
 
 <div class="contents">
 <ul class='tweet-lists'>
-    <%# <li class='tweet-list1'> %>
+    <li class='tweet-list1'>
         <div class="upper-content">
           <div class="content-user">
             <%= @tweet.user.nickname %>
@@ -17,13 +17,13 @@
           </div>
           <%= image_tag @tweet.image.variant(resize: '450x450'), class: 'tweet-image' if @tweet.image.attached? %>
         </div>
-    <%# </li> %>
+    </li>
     <div class="margin"></div>
 </ul>
 </div>
 
 <% if current_user.id == @tweet.user_id %>
-  <%# <%= link_to "編集", edit_item_path(@tweet.id), method: :get, class: "tweet-blue-btn" %>
+  <%= link_to "編集", edit_tweet_path(@tweet.id), method: :get, class: "tweet-blue-btn" %>
   <%= link_to "削除", tweet_path(@tweet.id), method: :delete, class:"tweet-destroy" %>
 <% end %>
 
