@@ -4,7 +4,7 @@
 <ul class='tweet-lists'>
   <% @tweets.each do |tweet| %>
     <li class='tweet-list'>
-      <%# <div class="content"> %>
+      <%= link_to tweet_path(tweet.id), class: "no-underline" do %>
         <div class="upper-content">
           <div class="content-user">
             <%= tweet.user.nickname %>
@@ -19,11 +19,11 @@
           </div>
           <%= image_tag tweet.image.variant(resize: '450x450'), class: 'tweet-image' if tweet.image.attached? %>
         </div>
-      <%# </div> %>
+      <% end %>
     </li>
     <div class="margin"></div>
   <% end %>
-  
+</ul>
 </div>
 
 
