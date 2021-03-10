@@ -2,7 +2,7 @@
 
 <div class="contents">
 <ul class='tweet-lists'>
-    <li class='tweet-list1'>
+    <%# <li class='tweet-list1'> %>
         <div class="upper-content">
           <div class="content-user">
             <%= @tweet.user.nickname %>
@@ -17,7 +17,7 @@
           </div>
           <%= image_tag @tweet.image.variant(resize: '450x450'), class: 'tweet-image' if @tweet.image.attached? %>
         </div>
-    </li>
+    <%# </li> %>
     <div class="margin"></div>
 </ul>
 </div>

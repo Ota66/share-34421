@@ -8,5 +8,9 @@
   font-size: 24px;
   color: black;
   padding: 2vh 10vw;
-  /* margin: ; */
+  margin: 0 510px 100px;
+  display: block;
+  text-align: center;
+  border-radius: 6px;
+  text-decoration: none;
 }
