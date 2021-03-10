@@ -8,13 +8,14 @@
 
 .tweet-lists {
   height: 100vh;
-  margin: 0 160px;
+  margin: 0 160px 0 300px;
   overflow: scroll;
 }
 
 .tweet-list {
   margin: 30px 0 0 0;
   position: relative;
+  border-bottom: 1px solid #afafaf;
 }
 
 .upper-content {
@@ -40,4 +41,8 @@
   font-size: 15px;
   padding-left: 20px;
   margin-top: 10px;
+}
+
+.margin {
+  height: 20px;
 }

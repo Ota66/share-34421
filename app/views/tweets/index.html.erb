@@ -17,10 +17,11 @@
           <div class="content-tweet">
             <%= tweet.text %>
           </div>
-          <%= image_tag tweet.image.variant(resize: '300x300'), class: 'tweet-image' if tweet.image.attached? %>
+          <%= image_tag tweet.image.variant(resize: '450x450'), class: 'tweet-image' if tweet.image.attached? %>
         </div>
       <%# </div> %>
     </li>
+    <div class="margin"></div>
   <% end %>
   
 </div>
