@@ -1,7 +1,15 @@
+.type-icon2 {
+  font-size: 50px;
+  text-decoration: none;
+  color: rgb(10, 51, 235);
+  font-family: fantasy;
+  margin: 8px auto 0;
+}
+
 .box {
   width: 400px;
-  height: 530px;
-  margin: 130px auto 145px;
+  height: 500px;
+  margin: 110px auto 145px;
   border-radius: 8px;
   border: 1px #ddd solid;
   background-color: #e7e7e7;
