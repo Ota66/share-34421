@@ -35,7 +35,7 @@
 | ------- | ---------- | ----------- |
 | user    | references | null: false |
 | tweet   | references | null: false |
-| comment | string    | null: false |
+| text    | string    | null: false |
 
 ### Association
 

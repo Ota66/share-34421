@@ -1,33 +1,51 @@
 <%= render "shared/header" %>
 
 <div class="contents">
-<ul class='tweet-lists'>
-    <li class='tweet-list1'>
-      <%= link_to user_path(@tweet.user), class: "no-underline" do %>
-        <div class="upper-content">
-          <div class="content-user">
-            <%= @tweet.user.nickname %>
+  <ul class='tweet-lists'>
+      <li class='tweet-list1'>
+        <%= link_to user_path(@tweet.user), class: "no-underline" do %>
+          <div class="upper-content">
+            <div class="content-user">
+              <%= @tweet.user.nickname %>
+            </div>
+            <div class="content-date">
+              <%= @tweet.created_at %>
+            </div>
           </div>
-          <div class="content-date">
-            <%= @tweet.created_at %>
+          <div class="lower-content">
+            <div class="content-tweet">
+              <%= @tweet.text %>
+            </div>
+            <%= image_tag @tweet.image.variant(resize: '450x450'), class: 'tweet-image' if @tweet.image.attached? %>
           </div>
-        </div>
-        <div class="lower-content">
-          <div class="content-tweet">
-            <%= @tweet.text %>
-          </div>
-          <%= image_tag @tweet.image.variant(resize: '450x450'), class: 'tweet-image' if @tweet.image.attached? %>
-        </div>
-      <% end %>
-    </li>
-    <div class="margin"></div>
-</ul>
-</div>
+        <% end %>
+      </li>
+      <div class="margin"></div>
+  </ul>
 
-<% if current_user.id == @tweet.user_id %>
-  <%= link_to "編集", edit_tweet_path(@tweet.id), method: :get, class: "tweet-blue-btn" %>
-  <%= link_to "削除", tweet_path(@tweet.id), method: :delete, class:"tweet-destroy" %>
-<% end %>
+  <%if user_signed_in? %>
+    <% if current_user.id == @tweet.user_id %>
+      <%= link_to "編集", edit_tweet_path(@tweet.id), method: :get, class: "tweet-blue-btn" %>
+      <%= link_to "削除", tweet_path(@tweet.id), method: :delete, class:"tweet-destroy" %>
+    <% end %>
+
+    <%= form_with model: [@tweet, @comment], local: true do |f| %>
+      <div class="field">
+        <%= f.text_area :text, class: "input-area", id:"text", placeholder:"コメント", autofocus: true %>
+        <%= f.submit "送信する", class: "form__btn"  %>
+      </div>
+    <% end %> 
+  <% end %> 
+  <ul class="comments_lists">
+  <p class='info-comment'></p>
+    <% @comments.each do |comment| %>
+      <li class="comments_list">
+        <%= comment.text %>
+        <%= link_to "#{comment.user.nickname}", "/users/#{comment.user_id}", class: "comment_user" %>
+      </li>
+    <% end %>
+  </ul>
+</div>
 
 
 <%= render "shared/footer" %>
