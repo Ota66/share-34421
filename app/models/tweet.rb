@@ -3,6 +3,14 @@ class Tweet < ApplicationRecord
   has_many :comments
   has_one_attached :image
 
+  def self.search(search)
+    if search != ""
+      Tweet.where('text LIKE(?)', "%#{search}%")
+    else
+      Tweet.all
+    end
+  end
+
   validates :text, presence: true, unless: :was_attached?
 
   def was_attached?
