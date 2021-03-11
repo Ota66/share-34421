@@ -40,8 +40,8 @@
   <p class='info-comment'>------コメント一覧------</p>
     <% @comments.each do |comment| %>
       <li class="comments_list">
-        <%= comment.text %>
         <%= link_to "#{comment.user.nickname}", "/users/#{comment.user_id}", class: "comment_user" %>
+        <%= comment.text %>
       </li>
     <% end %>
   </ul>
