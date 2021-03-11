@@ -15,11 +15,12 @@
 
 .nav {
   justify-content: flex-end;
-  margin: 25px 0 25px 320px;
+  margin: 25px 0 25px 500px;
 }
 
 .list {
   display: flex;
+  width: 500px;
 }
 
 .login {
