@@ -4,10 +4,10 @@
 
 // トップページ
 .contents {
+  min-height: 100vh;
 }
 
 .tweet-lists {
-  height: 90vh;
   margin: 0 160px 0 300px;
   overflow: scroll;
 }

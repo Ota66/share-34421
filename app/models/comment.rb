@@ -1,6 +1,6 @@
-class Tweet < ApplicationRecord
+class Comment < ApplicationRecord
   belongs_to :user
-  has_many :comments
+  belongs_to :tweet
   has_one_attached :image
 
   validates :text, presence: true, unless: :was_attached?

@@ -2,8 +2,8 @@
 
 <div class="contents">
 <ul class='tweet-lists'>
+  <p><%= @user.nickname %>さんの投稿一覧</p>
   <% @tweets.each do |tweet| %>
-    <p><%= tweet.user.nickname %>さんの投稿一覧</p>
     <li class='tweet-list'>
       <%= link_to tweet_path(tweet.id), class: "no-underline" do %>
         <div class="upper-content">
