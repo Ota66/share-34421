@@ -31,25 +31,7 @@
 </ul>
 </div>
 
-<%if user_signed_in? %>
-  <%= link_to("", class: 'message-btn') do %>
-    <span class='message-btn-text'>メッセージ</span>
-    <%= image_tag 'icon-256.png' , size: '185x50' ,class: "message-btn-icon" %>
-  <% end %>
-  <%= link_to(new_tweet_path, class: 'post-btn') do %>
-    <span class='post-btn-text'>投稿する</span>
-    <%= image_tag 'icon-255.png' , size: '185x50' ,class: "post-btn-icon" %>
-  <% end %>
-<% else %>
-  <%= link_to(new_user_session_path, class: 'message-btn') do %>
-    <span class='message-btn-text'>メッセージ</span>
-    <%= image_tag 'icon-256.png' , size: '185x50' ,class: "message-btn-icon" %>
-  <% end %>
-  <%= link_to(new_user_session_path, class: 'post-btn') do %>
-    <span class='post-btn-text'>投稿する</span>
-    <%= image_tag 'icon-255.png' , size: '185x50' ,class: "post-btn-icon" %>
-  <% end %>
-<% end %>
+<%= render "shared/icon" %>
 
 <%= render "shared/footer" %>
 
