@@ -30,14 +30,14 @@
 
 <% if current_user.id != @user.id %>
   <% if user_signed_in? %>
-    <%= link_to("#", class: 'post-btn') do %>
-      <span class='post-btn-text'>メッセージ</span>
-      <%= image_tag 'icon-256.png' , size: '185x50' ,class: "post-btn-icon" %>
+    <%= link_to("#", class: 'message-btn') do %>
+      <span class='message-btn-text'>メッセージ</span>
+      <%= image_tag 'icon-256.png' , size: '185x50' ,class: "message-btn-icon" %>
     <% end %>
   <% else %>
-    <%= link_to(new_user_session_path, class: 'post-btn') do %>
-      <span class='post-btn-text'>メッセージ</span>
-      <%= image_tag 'icon-256.png' , size: '185x50' ,class: "post-btn-icon" %>
+    <%= link_to(new_user_session_path, class: 'message-btn') do %>
+      <span class='message-btn-text'>メッセージ</span>
+      <%= image_tag 'icon-256.png' , size: '185x50' ,class: "message-btn-icon" %>
     <% end %>
   <% end %>
 <% end %>
