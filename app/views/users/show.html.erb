@@ -3,6 +3,7 @@
 <div class="contents">
 <ul class='tweet-lists'>
   <p><%= @user.nickname %>さんの投稿一覧</p>
+  <%=link_to '変更', edit_user_path(@user.id) %>
   <% @tweets.each do |tweet| %>
     <li class='tweet-list'>
       <%= link_to tweet_path(tweet.id), class: "no-underline" do %>
@@ -26,5 +27,7 @@
   <% end %>
 </ul>
 </div>
+
+<%= render "shared/icon" %>
 
 <%= render "shared/footer" %>

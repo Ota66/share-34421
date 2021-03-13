@@ -3,12 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // トップページ
+body {
+}
+
 .contents {
   min-height: 100vh;
 }
 
 .tweet-lists {
-  margin: 0 160px 0 300px;
+  margin: 0 160px 0 400px;
   overflow: scroll;
 }
 
@@ -25,7 +28,7 @@
 }
 
 .content-user {
-  color: #434a54;
+  color: rgb(105, 105, 105);
   font-size: 25px;
 }
 
@@ -34,7 +37,7 @@
 }
 
 .content-tweet {
-  color: #434a54;
+  color: rgb(105, 105, 105);
   font-size: 18px;
 }
 

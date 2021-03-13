@@ -1,0 +1,20 @@
+.form-text {
+  margin-bottom: 18px;
+}
+
+.input {
+  height: 200px;
+  width: 350px;
+}
+
+.form-image {
+  margin-bottom: 22px;
+}
+
+.box-send [type="submit"] {
+  width: 100%;
+  height: 33px;
+  background: linear-gradient(to bottom,#f7dcc2,#f7aa05);
+  border-radius: 3px;
+  border: 1px #a88734 solid;
+}

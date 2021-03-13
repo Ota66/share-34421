@@ -9,64 +9,13 @@
   font-size: 50px;
   text-decoration: none;
   color: rgb(10, 51, 235);
-  font-family: fantasy;
-  margin-top: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow';
+  margin: 10px auto 0 0;
 }
 
-.nav {
-  justify-content: flex-end;
-  margin: 25px 0 25px 320px;
+.icon {
+  width: 50px;
+  height: 50px;
+  margin: 10px 4px 0 auto;
 }
 
-.list {
-  display: flex;
-}
-
-.login {
-  font-size: 25px;
-  text-decoration: none;
-  color: #1618bd;
-  border: 3px solid #1618bd;
-  border-radius: 6px;
-  background-color: rgb(255, 254, 254);
-  padding: 10px;
-}
-
-.sign-up {
-  font-size: 25px;
-  text-decoration: none;
-  color: #1618bd;
-  margin-left: 50px;
-  border: 3px solid #1618bd;
-  border-radius: 6px;
-  background-color: rgb(255, 254, 254);
-  padding: 10px;
-}
-
-.logout {
-  font-size: 25px;
-  text-decoration: none;
-  color: #1618bd;
-  border: 3px solid #1618bd;
-  border-radius: 6px;
-  background-color: rgb(255, 254, 254);
-  padding: 10px;
-}
-
-.user-nickname {
-  font-size: 25px;
-  text-decoration: none;
-  color: #1618bd;
-  margin-right: 30px;
-}
-
-.post {
-  font-size: 25px;
-  text-decoration: none;
-  color: #1618bd;
-  margin-right: 30px;
-  border: 3px solid #1618bd;
-  border-radius: 6px;
-  background-color: rgb(255, 254, 254);
-  padding: 10px;
-}

@@ -1,15 +1,8 @@
 <header class='heaher'>
+  <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+  <script>
+    new Darkmode().showWidget();
+  </script>
+  <%= image_tag 'icon-261.png' , size: '185x50' ,class: "icon" %>
   <%= link_to 'Shares', root_path, class: "type-icon" %>
-  <div class='nav'>
-    <ul class='list'>
-    <% if user_signed_in? %>
-      <li><%= link_to current_user.nickname, user_path(current_user.id), class: "user-nickname" %></li>
-      <li><%= link_to '投稿', new_tweet_path, class: "post" %></li>
-      <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-    <% else %>
-      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-      <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-    <% end %>
-    </ul>
-  </div>
 </header>
