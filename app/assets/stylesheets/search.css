@@ -6,12 +6,13 @@
   width: 500px;
   padding: 12px;
   border-radius: 6px;
+  color: #ddd;
 }
 
 .search-btn {
   width: 100px;
   padding: 12px;
   border-radius: 6px;
-  background: linear-gradient(to bottom,#97a0f1,#1048e4);
-  color: rgb(255, 255, 255);
+  background: linear-gradient(to bottom,#ffffff,#1048e4);
+  color:rgb(31, 29, 29);
 }

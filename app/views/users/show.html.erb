@@ -3,6 +3,7 @@
 <div class="contents">
 <ul class='tweet-lists'>
   <p><%= @user.nickname %>さんの投稿一覧</p>
+  <%=link_to '変更', edit_user_path(@user.id) %>
   <% @tweets.each do |tweet| %>
     <li class='tweet-list'>
       <%= link_to tweet_path(tweet.id), class: "no-underline" do %>
@@ -27,34 +28,6 @@
 </ul>
 </div>
 
-<%if user_signed_in? %>
-  <%= link_to(user_path(current_user.id), class: 'mipage-btn') do %>
-    <div class='mipage-btn-text'>
-      <%= current_user.nickname %>
-    </div>
-    <%= image_tag 'icon-252.png' , size: '185x50' ,class: "mipage-btn-icon" %>
-  <% end %>
-  <%= link_to(destroy_user_session_path, method: :delete, class: 'sign-up-btn') do %>
-    <span class='sign-up-btn-text'>ログアウト</span>
-    <%= image_tag 'icon-250.png' , size: '185x50' ,class: "sign-up-btn-icon" %>
-  <% end %>
-  <%= link_to(new_tweet_path, class: 'post-btn') do %>
-    <span class='post-btn-text'>投稿する</span>
-    <%= image_tag 'icon-257.png' , size: '185x50' ,class: "post-btn-icon" %>
-  <% end %>
-<% else %>
-  <%= link_to(new_user_session_path, class: 'mipage-btn') do %>
-    <span class='mipage-btn-text'>マイページ</span>
-    <%= image_tag 'icon-252.png' , size: '185x50' ,class: "mipage-btn-icon" %>
-  <% end %>
-  <%= link_to(new_user_session_path, class: 'logout-btn') do %>
-    <span class='logout-btn-text'>ログイン</span>
-    <%= image_tag 'icon-251.png' , size: '185x50' ,class: "logout-btn-icon" %>
-  <% end %>
-  <%= link_to(new_user_session_path, class: 'post-btn') do %>
-    <span class='post-btn-text'>投稿する</span>
-    <%= image_tag 'icon-257.png' , size: '185x50' ,class: "post-btn-icon" %>
-  <% end %>
-<% end %>
+<%= render "shared/icon" %>
 
 <%= render "shared/footer" %>

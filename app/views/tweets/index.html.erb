@@ -12,7 +12,7 @@
       <%= link_to tweet_path(tweet.id), class: "no-underline" do %>
         <div class="upper-content">
           <div class="content-user">
-            <%= tweet.user.nickname %>
+            <p><%= tweet.user.nickname %><p>
           </div>
           <div class="content-date">
             <%= tweet.created_at %>

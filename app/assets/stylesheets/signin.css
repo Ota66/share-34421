@@ -32,6 +32,7 @@ h1 {
 .form-nickname label, .form-email label, .form-password label, .form-password-confirmation label {
   font-weight: 700;
   font-size: 13px;
+  color: #000;
 }
 
 .form-nickname input[type="text"], .form-email input[type="email"], .form-password input[type="password"], .form-password-confirmation input[type="password"] {
@@ -58,6 +59,7 @@ h1 {
 .box-newusr p {
   text-align: center;
   margin-top: 40px;
+  color: #000;
 }
 
 .box-newusr a {
@@ -73,5 +75,10 @@ h1 {
   border-radius: 3px;
   border: 1px #a2a6ac solid;
 }
+
+.legal-text {
+  color: #000;
+}
+
 
 
