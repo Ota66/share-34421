@@ -1,12 +1,14 @@
-<div class="user-information">
+<%= render "shared/header" %>
+
+<div class="information">
   <div class="user-nickname">
-    <p><%= @user.nickname %><p>
+    <%= @user.nickname %>
   </div>
-  <div class="user-introduction">
-    <%= @user.introduction %>
-  </div>
+  <%=link_to '変更', edit_user_registration_path(@user.id), class: "change" %>
 </div>
-<%=link_to '変更', edit_user_registration_path(@user.id) %>
+<div class="user-introduction">
+  <%= @user.introduction %>
+</div>
 
 <div class="contents">
 <ul class='tweet-lists'>

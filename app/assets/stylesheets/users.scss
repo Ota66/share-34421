@@ -2,3 +2,29 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.information {
+  width: 70vw;
+  display: flex;
+  margin: 5px 30px 5px 400px;
+}
+
+.user-nickname {
+  font-size: 30px;
+}
+
+
+.user-introduction {
+  font-size: 20px;
+  margin-left: 400px;
+}
+
+.change {
+  text-decoration: none;
+  color: rgb(27, 116, 199);
+  border: 2px solid rgb(27, 116, 199);
+  padding: 8px 20px;
+  border-radius: 55px;
+  margin-left: 600px;
+}
+
+

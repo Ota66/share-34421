@@ -3,8 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // トップページ
-body {
-}
 
 .contents {
   min-height: 100vh;
@@ -18,7 +16,7 @@ body {
 .tweet-list {
   margin: 30px 0 0 0;
   position: relative;
-  border-bottom: 1px solid #afafaf;
+  border-top: 1px solid #afafaf;
   
 }
 
