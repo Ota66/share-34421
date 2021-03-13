@@ -10,8 +10,8 @@
 
 .user-nickname {
   font-size: 30px;
+  
 }
-
 
 .user-introduction {
   font-size: 20px;
@@ -27,4 +27,25 @@
   margin-left: 600px;
 }
 
+.form-edit {
+  margin-bottom: 22px;
+}
 
+.form-edit input[type="text"] {
+  width: 100%;
+  height: 31px;
+  border: 1px solid #a6a6a6;
+  border-radius: 3px;
+  padding: 0 7px;
+  background-color: #ffffff;
+}
+
+.form-introduction {
+  width: 350px;
+  height: 300px;
+}
+
+.input-default {
+  width: 350px;
+  height: 240px;
+}

@@ -1,3 +1,13 @@
+.box2 {
+  width: 400px;
+  /* height: 700px; */
+  margin: 110px auto 145px;
+  border-radius: 8px;
+  border: 1px #ddd solid;
+  background-color: #e7e7e7;
+}
+
+
 .form-text {
   margin-bottom: 18px;
 }
@@ -17,4 +27,9 @@
   background: linear-gradient(to bottom,#f7dcc2,#f7aa05);
   border-radius: 3px;
   border: 1px #a88734 solid;
+  
+}
+
+.box-send {
+  margin-top: 15px;
 }

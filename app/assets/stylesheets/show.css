@@ -26,3 +26,8 @@
   border-radius: 6px;
   text-decoration: none;
 }
+
+.user-introduction p {
+  color: gray;
+  font-size: 15px;
+}

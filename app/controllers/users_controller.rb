@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:show, :edit, :update]
+  before_action :set_tweet, only: [:show, :edit]
 
   def edit
-    @user = User.find(params[:id])
   end
 
   def update
@@ -14,7 +14,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
     @tweets = @user.tweets.order("created_at DESC")
   end
 
@@ -23,5 +22,8 @@ class UsersController < ApplicationController
     params.require(:user).permit(:introduction, :nickname)
   end
 
+  def set_tweet
+    @user = User.find(params[:id])
+  end
 
 end
