@@ -11,6 +11,13 @@
     <li class='tweet-list'>
       <%= link_to tweet_path(tweet.id), class: "no-underline" do %>
         <div class="upper-content">
+          <div class="user-image1">
+            <% if tweet.user.avatar.present? %>
+              <%= image_tag tweet.user.avatar.url, width: '100%', class: 'user-avatar1' %>
+            <% else %>
+              <%= image_tag 'icon-258.png', width: '100%', class: 'user-avatar1' %>
+            <%end%>
+          </div>  
           <div class="content-user">
             <%= tweet.user.nickname %>
           </div>

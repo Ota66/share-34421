@@ -3,8 +3,6 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 // トップページ
-body {
-}
 
 .contents {
   min-height: 100vh;
@@ -18,7 +16,7 @@ body {
 .tweet-list {
   margin: 30px 0 0 0;
   position: relative;
-  border-bottom: 1px solid #afafaf;
+  border-top: 1px solid #afafaf;
   
 }
 
@@ -30,6 +28,7 @@ body {
 .content-user {
   color: rgb(105, 105, 105);
   font-size: 25px;
+  margin-top: 10px;
 }
 
 .lower-content {
@@ -45,7 +44,7 @@ body {
   color: #999;
   font-size: 15px;
   padding-left: 20px;
-  margin-top: 10px;
+  margin-top: 13px;
 }
 
 .margin {
@@ -55,3 +54,18 @@ body {
 .no-underline {
   text-decoration: none !important;
 }
+
+.user-image1 {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin-right: 5px;
+  background-color: rgb(206, 206, 206);
+}
+
+.user-avatar1 {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+

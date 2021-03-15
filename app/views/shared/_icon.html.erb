@@ -1,3 +1,4 @@
+
 <%if user_signed_in? %>
   <%= link_to(user_path(current_user.id), class: 'mipage-btn') do %>
     <div class='mipage-btn-text'>
@@ -11,7 +12,7 @@
   <% end %>
   <%= link_to(new_tweet_path, class: 'post-btn') do %>
     <span class='post-btn-text'>投稿する</span>
-    <%= image_tag 'icon-257.png' , size: '185x50' ,class: "post-btn-icon" %>
+    <%= image_tag 'icon-261.png' , size: '185x50' ,class: "post-btn-icon" %>
   <% end %>
 <% else %>
   <%= link_to(new_user_registration_path, class: 'registrations-btn') do %>

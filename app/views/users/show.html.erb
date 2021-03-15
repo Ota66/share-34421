@@ -1,13 +1,45 @@
-<%= render "shared/header" %>
+<% if @user.header_image.present? %>
+  <header class='user-heaher'>
+    <%= image_tag @user.header_image.url, width: '100%', class: 'user-header_image' %>
+  </header>
+<% else %>
+  <%= render "shared/header" %>
+<%end%>
+
+
+<div class="information">
+  <div class="user-image">
+    <% if @user.avatar.present? %>
+      <%= image_tag @user.avatar.url, width: '100%', class: 'user-avatar' %>
+    <% else %>
+      <%= image_tag 'icon-258.png', width: '100%', class: 'user-avatar' %>
+    <%end%>
+  </div>
+  <div class="user-nickname">
+    <%= @user.nickname %>
+  </div>
+  <% if current_user.id == @user.id %>
+    <%=link_to '変更', edit_user_registration_path(@user.id), class: "change" %>
+  <% end %>
+</div>
+<div class="user-introduction">
+  <p>自己紹介</p>
+  <%= @user.introduction %>
+</div>
 
 <div class="contents">
 <ul class='tweet-lists'>
-  <p><%= @user.nickname %>さんの投稿一覧</p>
-  <%=link_to '変更', edit_user_path(@user.id) %>
   <% @tweets.each do |tweet| %>
     <li class='tweet-list'>
       <%= link_to tweet_path(tweet.id), class: "no-underline" do %>
         <div class="upper-content">
+          <div class="user-image1">
+            <% if tweet.user.avatar.present? %>
+              <%= image_tag tweet.user.avatar.url, width: '100%', class: 'user-avatar1' %>
+            <% else %>
+              <%= image_tag 'icon-258.png', width: '100%', class: 'user-avatar1' %>
+            <%end%>
+          </div>  
           <div class="content-user">
             <%= tweet.user.nickname %>
           </div>
@@ -28,6 +60,46 @@
 </ul>
 </div>
 
-<%= render "shared/icon" %>
+<%if user_signed_in? %>
+  <% if current_user.id != @user.id %>
+    <%= link_to(user_path(current_user.id), class: 'mipage-btn') do %>
+      <div class='mipage-btn-text'>
+        <%= current_user.nickname %>
+      </div>
+      <%= image_tag 'icon-252.png' , size: '185x50' ,class: "mipage-btn-icon" %>
+    <% end %>
+  <% else %>
+    <%= link_to(root_path, class: 'mipage-btn') do %>
+      <span class='mipage-btn-text'>トップ</span>
+      <%= image_tag 'icon-252.png' , size: '185x50' ,class: "mipage-btn-icon" %>
+    <% end %>
+  <% end %>
+  <%= link_to(destroy_user_session_path, method: :delete, class: 'sign-up-btn') do %>
+    <span class='sign-up-btn-text'>ログアウト</span>
+    <%= image_tag 'icon-250.png' , size: '185x50' ,class: "sign-up-btn-icon" %>
+  <% end %>
+  <%= link_to(new_tweet_path, class: 'post-btn') do %>
+    <span class='post-btn-text'>投稿する</span>
+    <%= image_tag 'icon-261.png' , size: '185x50' ,class: "post-btn-icon" %>
+  <% end %>
+<% else %>
+  <%= link_to(new_user_registration_path, class: 'registrations-btn') do %>
+    <span class='registrations-btn-text'>新規登録</span>
+    <%= image_tag 'icon-258.png' , size: '185x50' ,class: "registrations-btn-icon" %>
+  <% end %>
+  <%= link_to(new_user_session_path, class: 'mipage-btn') do %>
+    <span class='mipage-btn-text'>マイページ</span>
+    <%= image_tag 'icon-252.png' , size: '185x50' ,class: "mipage-btn-icon" %>
+  <% end %>
+  <%= link_to(new_user_session_path, class: 'logout-btn') do %>
+    <span class='logout-btn-text'>ログイン</span>
+    <%= image_tag 'icon-251.png' , size: '185x50' ,class: "logout-btn-icon" %>
+  <% end %>
+  <%= link_to(new_user_session_path, class: 'post-btn') do %>
+    <span class='post-btn-text'>投稿する</span>
+    <%= image_tag 'icon-261.png' , size: '185x50' ,class: "post-btn-icon" %>
+  <% end %>
+<% end %>
+
 
 <%= render "shared/footer" %>

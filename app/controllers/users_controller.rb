@@ -1,12 +1,11 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, only: [:show, :edit, :update]
+  before_action :set_user, only: [:show, :edit]
 
   def edit
-    @user = User.find(params[:id])
   end
 
   def update
-    # binding.pry
     if current_user.update(user_params)
       redirect_to user_path(current_user.id)
     else
@@ -15,14 +14,16 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
     @tweets = @user.tweets.order("created_at DESC")
   end
 
   private
   def user_params
-    params.require(:user).permit(:introduction, :nickname)
+    params.require(:user).permit(:introduction, :nickname, :avatar, :header_image)
   end
 
+  def set_user
+    @user = User.find(params[:id])
+  end
 
 end
