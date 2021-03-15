@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.user-heaher {
+  height: 400px;
+}
+
+.user-header_image {
+  height: 400px;
+}
+
 .information {
   width: 70vw;
   display: flex;
@@ -40,7 +48,7 @@
   border: 2px solid rgb(27, 116, 199);
   padding: 7px 20px 0;
   border-radius: 55px;
-  margin-left: 600px;
+  margin-left: 500px;
   font-size: 20px;
   height: 50px;
 }

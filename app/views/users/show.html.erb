@@ -1,4 +1,11 @@
-<%= render "shared/header" %>
+<% if @user.header_image.present? %>
+  <header class='user-heaher'>
+    <%= image_tag @user.header_image.url, width: '100%', class: 'user-header_image' %>
+  </header>
+<% else %>
+  <%= render "shared/header" %>
+<%end%>
+
 
 <div class="information">
   <div class="user-image">
@@ -59,6 +66,11 @@
       <div class='mipage-btn-text'>
         <%= current_user.nickname %>
       </div>
+      <%= image_tag 'icon-252.png' , size: '185x50' ,class: "mipage-btn-icon" %>
+    <% end %>
+  <% else %>
+    <%= link_to(root_path, class: 'mipage-btn') do %>
+      <span class='mipage-btn-text'>トップ</span>
       <%= image_tag 'icon-252.png' , size: '185x50' ,class: "mipage-btn-icon" %>
     <% end %>
   <% end %>

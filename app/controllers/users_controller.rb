@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!, only: [:show, :edit, :update]
-  before_action :set_tweet, only: [:show, :edit]
+  before_action :set_user, only: [:show, :edit]
 
   def edit
   end
@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     params.require(:user).permit(:introduction, :nickname, :avatar, :header_image)
   end
 
-  def set_tweet
+  def set_user
     @user = User.find(params[:id])
   end
 
