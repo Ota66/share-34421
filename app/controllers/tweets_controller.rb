@@ -27,7 +27,7 @@ class TweetsController < ApplicationController
   end
 
   def destroy
-    tweet.destroy
+    @tweet.destroy
     redirect_to root_path
   end
 

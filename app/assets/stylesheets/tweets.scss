@@ -28,6 +28,7 @@
 .content-user {
   color: rgb(105, 105, 105);
   font-size: 25px;
+  margin-top: 10px;
 }
 
 .lower-content {
@@ -43,7 +44,7 @@
   color: #999;
   font-size: 15px;
   padding-left: 20px;
-  margin-top: 10px;
+  margin-top: 13px;
 }
 
 .margin {
@@ -53,3 +54,18 @@
 .no-underline {
   text-decoration: none !important;
 }
+
+.user-image1 {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  margin-right: 5px;
+  background-color: rgb(206, 206, 206);
+}
+
+.user-avatar1 {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+

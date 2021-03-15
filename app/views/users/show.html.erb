@@ -1,6 +1,13 @@
 <%= render "shared/header" %>
 
 <div class="information">
+  <div class="user-image">
+    <% if @user.avatar.present? %>
+      <%= image_tag @user.avatar.url, width: '100%', class: 'user-avatar' %>
+    <% else %>
+      <%= image_tag 'icon-258.png', width: '100%', class: 'user-avatar' %>
+    <%end%>
+  </div>
   <div class="user-nickname">
     <%= @user.nickname %>
   </div>
@@ -19,6 +26,13 @@
     <li class='tweet-list'>
       <%= link_to tweet_path(tweet.id), class: "no-underline" do %>
         <div class="upper-content">
+          <div class="user-image1">
+            <% if tweet.user.avatar.present? %>
+              <%= image_tag tweet.user.avatar.url, width: '100%', class: 'user-avatar1' %>
+            <% else %>
+              <%= image_tag 'icon-258.png', width: '100%', class: 'user-avatar1' %>
+            <%end%>
+          </div>  
           <div class="content-user">
             <%= tweet.user.nickname %>
           </div>

@@ -19,7 +19,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:introduction, :nickname)
+    params.require(:user).permit(:introduction, :nickname, :avatar, :header_image)
   end
 
   def set_tweet

@@ -4,7 +4,7 @@
 
 .field {
   width: 800px;
-  height: 205px;
+  // height: 205px;
   margin: 30px auto 0;
   border-radius: 8px;
   border: 1px #ddd solid;
@@ -24,7 +24,7 @@
 .form__btn {
   width: 100px;
   display: block;
-  margin: 5px 350px 0;
+  margin: 5px auto;
   background: linear-gradient(to bottom,#f5e2d1,#f7aa05);
   color: rgb(17, 15, 15);
   border-radius: 3px;
@@ -54,5 +54,23 @@
   text-decoration: none;
   color: #a6a6a6;
   margin-right: 10px;
-  
 }
+
+.box-image {
+  margin: 0 75px;
+}
+
+.user-image2 {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  margin-right: 5px;
+  background-color: rgb(206, 206, 206);
+}
+
+.user-avatar2 {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+

@@ -4,6 +4,10 @@
     <%= form_with(model: @user, local: true) do |f| %>
       <h1>ユーザー編集</h1>
       <div class="form-edit">
+        <div class='form-avatar-wrap'>
+          <label class="form-avatar-text">トップ画像</label>
+        </div>
+        <%= f.file_field :avatar, class:"input-avatar", id:"avatar" %>
         <div class='form-edit-wrap'>
           <label class="form-edit-text">ニックネーム</label>
         </div>
@@ -21,5 +25,6 @@
     <% end %>
   </div>
 </div>
+
 
 <%= render "shared/footer" %>
