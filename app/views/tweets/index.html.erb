@@ -1,7 +1,5 @@
 <%= render "shared/header" %>
 
-
-
 <%= form_with(url: search_tweets_path, local: true, method: :get, class: "search-form") do |form| %>
   <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
   <%= form.submit "検索", class: "search-btn" %>
@@ -33,6 +31,12 @@
           </div>
           <%= image_tag tweet.image.variant(resize: '450x450'), class: 'tweet-image' if tweet.image.attached? %>
         </div>
+        <h3>いいね件数: <%= tweet.likes.count %></h3>
+          <% if current_user.already_liked?(tweet) %>
+            <%= link_to 'いいねを取り消す', tweet_like_path(tweet, @likes.ids), method: :delete %>
+          <% else %>
+            <%= link_to 'いいね', tweet_likes_path(tweet), method: :post %>
+          <% end %>
       <% end %>
     </li>
     <div class="margin"></div>
