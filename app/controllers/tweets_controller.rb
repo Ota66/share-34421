@@ -1,12 +1,12 @@
 class TweetsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
+  before_action :set_like, only: [:index, :show, :search]
   before_action :set_redirect, only: [:edit, :update, :destroy]
   
 
   def index
     @tweets = Tweet.includes(:user).order("created_at DESC")
-    @likes = Like.all
   end
 
   def new
@@ -25,7 +25,6 @@ class TweetsController < ApplicationController
   def show
     @comment = Comment.new
     @comments = @tweet.comments.includes(:user).order("created_at DESC")
-    @like = Like.new
   end
 
   def destroy
@@ -59,6 +58,10 @@ class TweetsController < ApplicationController
 
   def set_tweet
     @tweet = Tweet.find(params[:id])
+  end
+
+  def set_like
+    @likes = Like.all
   end
 
 end

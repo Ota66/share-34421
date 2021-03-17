@@ -1,8 +1,8 @@
 <%= render "shared/header" %>
 
-<%= form_with(url: search_tweets_path, local: true, method: :get, class: "search-form") do |form| %>
-  <%= form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
-  <%= form.submit "検索", class: "search-btn" %>
+<%= form_with(url: search_tweets_path, local: true, method: :get, class: "search-form") do |f| %>
+  <%= f.text_field :keyword, placeholder: "投稿を検索する", class: "search-input" %>
+  <%= f.submit "検索", class: "search-btn" %>
 <% end %>
 
 <div class="contents">
@@ -31,12 +31,32 @@
           </div>
           <%= image_tag tweet.image.variant(resize: '450x450'), class: 'tweet-image' if tweet.image.attached? %>
         </div>
-        <h3>いいね件数: <%= tweet.likes.count %></h3>
-          <% if current_user.already_liked?(tweet) %>
-            <%= link_to 'いいねを取り消す', tweet_like_path(tweet, @likes.ids), method: :delete %>
+        <div class="likes-count">
+          <% if current_user %>
+            <% if current_user.already_liked?(tweet) %>
+              <%= link_to tweet_like_path(tweet, @likes.ids), method: :delete, class: "like-button" do %>
+                <%= image_tag 'icon-253.png' , size: '25x25' ,class: "like-btn-icon" %>
+                <div class="like-math">
+                  <%= tweet.likes.count %>
+                </div>
+              <% end %>
+            <% else %>
+              <%= link_to tweet_likes_path(tweet), method: :post, class: "like-button" do %>
+                <%= image_tag 'icon-253.png' , size: '25x25' ,class: "like-btn-icon" %>
+                <div class="like-math">
+                  <%= tweet.likes.count %>
+                </div>
+              <% end %>
+            <% end %>
           <% else %>
-            <%= link_to 'いいね', tweet_likes_path(tweet), method: :post %>
+            <%= link_to new_user_session_path, method: :post, class: "like-button" do %>
+              <%= image_tag 'icon-253.png' , size: '25x25' ,class: "like-btn-icon" %>
+              <div class="like-math">
+                <%= tweet.likes.count %>
+              </div>
+            <% end %>
           <% end %>
+        </div>
       <% end %>
     </li>
     <div class="margin"></div>

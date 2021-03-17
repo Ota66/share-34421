@@ -15,6 +15,7 @@ class UsersController < ApplicationController
 
   def show
     @tweets = @user.tweets.order("created_at DESC")
+    @likes = Like.all
   end
 
   private

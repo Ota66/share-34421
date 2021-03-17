@@ -1,3 +1,23 @@
 // Place all the styles related to the likes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.likes-count {
+ margin-top: 10px;
+}
+
+.like-btn-icon {
+  
+}
+
+
+.like-button {
+  text-decoration: none;
+  margin-left: 10px;
+  display: flex;
+}
+
+.like-math {
+  margin: 3px 0 0 3px;
+  color: rgb(10, 51, 235);
+}
