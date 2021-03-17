@@ -6,6 +6,13 @@ class User < ApplicationRecord
 
   has_many :tweets, dependent: :destroy
   has_many :comments, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :liked_tweets, through: :likes, source: :tweet
+
+  def already_liked?(tweet_id)
+    self.likes.exists?(tweet_id: tweet_id)
+  end
+  
   mount_uploader :avatar, AvatarUploader
   mount_uploader :header_image, AvatarUploader 
 

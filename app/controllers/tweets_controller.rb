@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
+  before_action :set_like, only: [:index, :show, :search]
   before_action :set_redirect, only: [:edit, :update, :destroy]
   
 
@@ -57,6 +58,10 @@ class TweetsController < ApplicationController
 
   def set_tweet
     @tweet = Tweet.find(params[:id])
+  end
+
+  def set_like
+    @likes = Like.all
   end
 
 end
