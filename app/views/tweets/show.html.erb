@@ -53,6 +53,10 @@
           </div>
         <% end %>
       </li>
+      <h2>いいねしたユーザー</h2>
+        <% @tweet.liked_users.each do |user| %>
+          <li><%= user.nickname %></li>
+        <% end %>
       <div class="margin"></div>
   </ul>
 
