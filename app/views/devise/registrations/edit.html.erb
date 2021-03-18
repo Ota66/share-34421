@@ -3,6 +3,7 @@
   <div class="box-inner">
     <%= form_with(model: @user, local: true) do |f| %>
       <h1>ユーザー編集</h1>
+      <%= render 'shared/error_messages', model: f.object %> 
       <div class="form-edit">
         <div class='form-avatar-wrap'>
           <label class="form-avatar-text">トップ画像</label>
