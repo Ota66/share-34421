@@ -4,6 +4,7 @@
   <div class="box-inner">
     <%= form_with model: @tweet, url: tweets_path, class: 'registration-main', local: true do |f| %>
       <h1>投稿</h1>
+      <%= render 'shared/error_messages', model: f.object %> 
       <div class="form-text">
         <%= f.text_area :text, class:"input", id:"text", placeholder:"例) おはよう！", autofocus: true %>
       </div>
