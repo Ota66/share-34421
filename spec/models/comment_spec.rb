@@ -24,17 +24,17 @@ RSpec.describe Comment, type: :model do
         @comment.text = ''
         @comment.image = nil
         @comment.valid?
-        expect(@comment.errors.full_messages).to include("Text can't be blank")
+        expect(@comment.errors.full_messages).to include("コメントを入力してください")
       end
       it 'userが紐付いていないと保存できない' do
         @comment.user = nil
         @comment.valid?
-        expect(@comment.errors.full_messages).to include("User must exist")
+        expect(@comment.errors.full_messages).to include("Userを入力してください")
       end
       it 'tweetが紐付いていないと保存できない' do
         @comment.tweet = nil
         @comment.valid?
-        expect(@comment.errors.full_messages).to include("Tweet must exist")
+        expect(@comment.errors.full_messages).to include("Tweetを入力してください")
       end
     end
   end

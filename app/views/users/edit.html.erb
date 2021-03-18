@@ -1,0 +1,34 @@
+<%= render "shared/header" %>
+<div class="box">
+  <div class="box-inner">
+    <%= form_with(model: @user, local: true) do |f| %>
+      <h1>ユーザー編集</h1>
+      <div class="form-edit">
+        <div class='form-avatar-wrap'>
+          <label class="form-avatar-text">トップ画像</label>
+        </div>
+        <%= f.file_field :avatar, class:"input-avatar", id:"avatar" %>
+        <div class='form-header_image-wrap'>
+          <label class="form-header_image-text">ヘッター画像</label>
+        </div>
+        <%= f.file_field :header_image, class:"input-header_image", id:"header_image" %>
+        <div class='form-edit-wrap'>
+          <label class="form-edit-text">ニックネーム</label>
+        </div>
+        <%= f.text_field :nickname, class:"input", id:"nickname", autofocus: true %>
+      </div>
+      <div class="form-introduction">
+          <div class='form-introduction-wrap'>
+            <label class="form-introduction-text">自己紹介</label>
+          </div>
+        <%= f.text_area :introduction, class:"input-default", id:"introduction", autcomplete: "off" %>
+      </div>
+      <div class="box-login">
+        <%= f.submit "完了" %>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+
+<%= render "shared/footer" %>
