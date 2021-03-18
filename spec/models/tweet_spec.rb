@@ -31,19 +31,19 @@ RSpec.describe Tweet, type: :model do
         @tweet.image = nil
         @tweet.video = nil
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("Text can't be blank")
+        expect(@tweet.errors.full_messages).to include("テキストを入力してください")
       end
       it 'videoのみでは投稿できない' do
         @tweet.text = ''
         @tweet.image = nil
         @tweet.video = 'A-3.mov'
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("Text can't be blank")
+        expect(@tweet.errors.full_messages).to include("テキストを入力してください")
       end
       it 'userが紐付いていないと保存できない' do
         @tweet.user = nil
         @tweet.valid?
-        expect(@tweet.errors.full_messages).to include("User must exist")
+        expect(@tweet.errors.full_messages).to include("Userを入力してください")
       end
     end
   end
