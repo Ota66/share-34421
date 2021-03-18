@@ -1,6 +1,5 @@
 .box2 {
   width: 400px;
-  /* height: 700px; */
   margin: 110px auto 145px;
   border-radius: 8px;
   border: 1px #ddd solid;
@@ -18,6 +17,10 @@
 }
 
 .form-image {
+  
+}
+
+.from-video {
   margin-bottom: 22px;
 }
 

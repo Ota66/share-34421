@@ -9,13 +9,15 @@
       </div>
       <div class="form-image">
         <label class="form-image-wrap">
-          <%= f.file_field :image, class: 'hidden'%>
+          画像
         </label>
+        <%= f.file_field :image, class: 'hidden'%>
       </div>
       <div class="from-video">
         <label class="form-video-wrap">
-          <%= f.file_field :video, :accept => 'video/*' %>
+          動画
         </label>
+        <%= f.file_field :video, :accept => 'video/*' %>
       </div>
       <div class="box-send">
         <%= f.submit "投稿" %>

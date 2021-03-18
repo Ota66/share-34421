@@ -31,6 +31,9 @@
           </div>
           <%= image_tag tweet.image.variant(resize: '450x450'), class: 'tweet-image' if tweet.image.attached? %>
         </div>
+        <%= link_to tweet.video_url.to_s do %>
+          <%= video_tag tweet.video.to_s, size: '400x400', controls: true, autobuffer: true, class: 'tweet-video' if tweet.video.present? %>
+        <% end %>
         <div class="likes-count">
           <% if current_user %>
             <% if current_user.already_liked?(tweet) %>
