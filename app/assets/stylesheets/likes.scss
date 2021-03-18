@@ -6,11 +6,6 @@
  margin-top: 10px;
 }
 
-.like-btn-icon {
-  
-}
-
-
 .like-button {
   text-decoration: none;
   margin-left: 10px;
@@ -20,4 +15,42 @@
 .like-math {
   margin: 3px 0 0 3px;
   color: rgb(10, 51, 235);
+}
+
+.user-image3 {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: rgb(206, 206, 206);
+}
+
+.user-like-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+}
+
+.content-user1 {
+  color: rgb(105, 105, 105);
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+.like-content {
+  display: flex;
+}
+
+.like-user-introduction {
+  font-size: 17px;
+  margin-top: 10px;
+  color: rgb(105, 105, 105);
+}
+
+h2 {
+  margin-left: 230px;
+  font-size: 25px;
+}
+
+.like-btn-icon2 {
+  margin-top: 5px;
 }

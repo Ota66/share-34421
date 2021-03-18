@@ -4,6 +4,7 @@ class Tweet < ApplicationRecord
   has_many :likes
   has_many :liked_users, through: :likes, source: :user
   has_one_attached :image
+  mount_uploader :video, VideoUploader
 
   def self.search(search)
     if search != ""

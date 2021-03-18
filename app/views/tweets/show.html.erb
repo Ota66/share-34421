@@ -25,22 +25,16 @@
             </div>
             <%= image_tag @tweet.image.variant(resize: '450x450'), class: 'tweet-image' if @tweet.image.attached? %>
           </div>
+          <%= link_to @tweet.video_url.to_s do %>
+            <%= video_tag @tweet.video.to_s, size: '400x400', controls: true, autobuffer: true, class: 'tweet-video' if @tweet.video.present? %>
+          <% end %>
           <div class="likes-count">
             <% if current_user %>
-              <% if current_user.already_liked?(@tweet) %>
-                <%= link_to tweet_like_path(@tweet, @likes.ids), method: :delete, class: "like-button" do %>
-                  <%= image_tag 'icon-253.png' , size: '25x25' ,class: "like-btn-icon" %>
-                  <div class="like-math">
-                    <%= @tweet.likes.count %>
-                  </div>
-                <% end %>
-              <% else %>
-                <%= link_to tweet_likes_path(@tweet), method: :post, class: "like-button" do %>
-                  <%= image_tag 'icon-253.png' , size: '25x25' ,class: "like-btn-icon" %>
-                  <div class="like-math">
-                    <%= @tweet.likes.count %>
-                  </div>
-                <% end %>
+              <%= link_to tweet_likes_path(@tweet, @likes.ids), class: "like-button" do %>
+                <%= image_tag 'icon-253.png' , size: '25x25' ,class: "like-btn-icon" %>
+                <div class="like-math">
+                  <%= @tweet.likes.count %>
+                </div>
               <% end %>
             <% else %>
               <%= link_to new_user_session_path, method: :post, class: "like-button" do %>
