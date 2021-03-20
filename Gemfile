@@ -65,3 +65,5 @@ gem 'carrierwave'
 gem 'rails-i18n'
 gem 'ffi'
 gem "aws-sdk-s3", require: false
+gem 'fog-aws'
+gem 'dotenv-rails'
