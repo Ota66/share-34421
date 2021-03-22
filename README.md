@@ -59,7 +59,7 @@
 - いいねユーザー一覧  
 
 - ツイート検索  
-
+![Videotogif2](https://user-images.githubusercontent.com/78351931/111968450-80cab900-8b3c-11eb-8e67-e0c3779fb3af.gif)
 - 工夫した点  
 ①Basic認証や、デプロイする際にID/パスワードをソースコードから見られないように環境変数にしました。  
 ②動画投稿、トップ画像、ヘッター画像を設定出来るようにCarrierWaveのGemを使用しアップロード出来るようにしました。  
