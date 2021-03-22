@@ -74,6 +74,7 @@
 
 # ER図/テーブル表
 
+![erz](https://user-images.githubusercontent.com/78351931/111978869-bfb23c00-8b47-11eb-85ad-cffa55809b1a.png)
 
 ## users テーブル
 
