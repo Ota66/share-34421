@@ -1,6 +1,3 @@
-
-![Videotogif5](https://user-images.githubusercontent.com/78351931/111973279-ac9c6d80-8b41-11eb-8f22-8e4085d8a20e.gif)
-
 # アプリケーション名
 - Shares(シェアーズ)
 
