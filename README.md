@@ -51,7 +51,7 @@
 
 # 実装した機能（GIF説明)
 - 動画、テキスト投稿  
-
+![Videotogif](https://user-images.githubusercontent.com/78351931/111967908-ef5b4700-8b3b-11eb-97e5-cf82ac5844bd.gif)
 - 投稿編集、削除  
 
 - ユーザー編集  
