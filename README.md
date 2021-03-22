@@ -60,7 +60,12 @@
 
 - ツイート検索  
 
-# 工夫した点
+- 工夫した点  
+①Basic認証や、デプロイする際にID/パスワードをソースコードから見られないように環境変数にしました。  
+②動画投稿、トップ画像、ヘッター画像を設定出来るようにCarrierWaveのGemを使用しアップロード出来るようにしました。  
+③ユーザーがツイートに関していいねが出来るようにしました。
+④ダークモードにチェックを入れた際に、どのページに遷移しても適用されるようにしました。  
+④単体テストコードをコーディングすることにより、追加実装した際に基本的な機能を効率的にテストできるようにしました。  
 
 # 今後の実装予定機能
 - 個人チャット機能
@@ -129,7 +134,15 @@
 - belongs_to :user
 - validates_uniqueness_of :tweet_id, scope: :user_id
 
-# ローカル動作方法
+# ローカル動作方法  
+1)$ git clone https://github.com/Ota66/share-34421  
+2)$ ruby -v #任意  
+3)$ rails -v #任意  
+4)$ bundle install  
+5)$ rails db:create  
+6)$ rails db:migrate  
+7)$ rails s  
+8) http://localhost:3000  
 
 # 開発環境
 Ruby 2.6.5  
