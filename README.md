@@ -1,3 +1,5 @@
+
+
 # アプリケーション名
 - Shares(シェアーズ)
 
@@ -51,9 +53,9 @@
 
 # 実装した機能（GIF説明)
 - 動画、テキスト投稿  
-![Videotogif](https://user-images.githubusercontent.com/78351931/111967908-ef5b4700-8b3b-11eb-97e5-cf82ac5844bd.gif)
+![Videotogif](https://user-images.githubusercontent.com/78351931/111971090-57f7f300-8b3f-11eb-8ae2-89b8bc330ce0.gif)
 - 投稿編集、削除  
-
+![Videotogif3](https://user-images.githubusercontent.com/78351931/111970663-d902ba80-8b3e-11eb-8f62-7686bf34f5c5.gif)
 - ユーザー編集  
 
 - いいねユーザー一覧  
