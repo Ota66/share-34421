@@ -1,80 +1,118 @@
-# テーブル設計
+# アプリケーション名
+- Shares(シェアーズ)
+
+#　概要
+- 自分の出来事や伝えたいことを共有できるアプリです。
+- テキスト、画像、動画を投稿することが出来ます。
+- 投稿したツイートは編集したり、削除出来ます。
+- 他ユーザーのツイートにコメントが出来ます。
+- ツイートに対していいねが出来ます。また取り消すことも可能です。
+- ユーザー編集ができ、トップ画像、ヘッター画像が設定できます。
+
+# URL
+- https://share-34421.herokuapp.com/
+
+# テスト用アカウント
+- Basic認証（ID/Pass)
+  ID:mimimi  
+  Pass:222222
+- テスト用アカウント
+  NickName:ota  
+  Email:mitu@yahoo.co.jp  
+  Password:32104mi
+
+# 利用方法
+- 投稿方法
+①始めに左側にログインボタンが表示されているのでテスト用アカウントでサインインするか、 ご自分でお好きなアカウントをお作りして新規登録していただきます。  
+②トップページ左側に投稿ボタンがあるので押します。  
+③投稿入力画面が表示されるのでお好きな内容を入力し投稿ボタンを押します。  
+④トップページに遷移し投稿内容が表示されます。(必要に応じて"編集","削除","いいね"ボタンを押しても構いません。 )
+- ユーザー編集方法
+①ログインしている状態で左側にご登録していただいたユーザー名を押します。  
+②ユーザー詳細ページに遷移し右側に変更ボタンがあるので押します。  
+③ユーザー編集入力画面が表示されるのでお好きなトップ画像、ヘッター画像、自己紹介文を入力し完了ボタンを押します。  
+④ユーザー詳細ページに遷移し変更内容が表示されます。
+# 課題解決
+- ターゲットは男女問わず10代〜40代です。  
+- 
+# 要件定義
+
+# 実装した機能（GIF説明)
+
+# 今後の実装予定機能
+- 個人チャット機能
+- フォロー機能
+- レスポンシブデザイン
+
+# ER図/テーブル表
+
 
 ## users テーブル
 
-| Column       | Type   | Options     |
-| ------------ | ------ | ----------- |
-| name         | string | null: false |
-| email        | string | null: false |
-| password     | string | null: false |
-| introduction | text   |             |
+| Column       | Type   | Options                   |
+| ------------ | ------ | ------------------------- |
+| name         | string | null: false               |
+| email        | string | null: false, unique: true |
+| password     | string | null: false               |
+| introduction | text   |                           |
+| avatar       | string |                           |
+| header_image | string |                           |
 
 ### Association
 
-- has_many :room_users
-- has_many :rooms, through: room_users
-- has_many :messages
+- has_many :likes
+- has_many :liked_users, through: :likes, source: :user
 - has_many :tweets
 - has_many :comments
 
 ## tweets テーブル
 
-| Column | Type       | Options     |
-| ------ | ---------- | ----------- |
-| user   | references | null: false |
-| text   | text       |             |
+| Column | Type       | Options                        |
+| ------ | ---------- | ------------------------------ |
+| user   | references | null: false, foreign_key: true |
+| text   | text       | null: false                    |
+| video  | string     |                                |
 
 ### Association
 
 - belongs_to :user
 - has_many :comments
+- has_many :likes
+- has_many :liked_users, through: :likes, source: :user
 
 ## comments テーブル
 
-| Column  | Type       | Options     |
-| ------- | ---------- | ----------- |
-| user    | references | null: false |
-| tweet   | references | null: false |
-| text    | string    | null: false |
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| user    | references | null: false, foreign_key: true |
+| tweet   | references | null: false, foreign_key: true |
+| text    | string     | null: false                    |
 
 ### Association
 
 - belongs_to :user
 - belongs_to :tweet
 
-## rooms テーブル
-
-| Column | Type       | Options     |
-| ------ | ---------- | ----------- |
-| user   | references | null: false |
-
-### Association
-
-- has_many :room_users
-- has_many :users, through: room_users
-- has_many :messages
-
-## room_users テーブル
+## likes テーブル
 
 | Column | Type       | Options                        |
 | ------ | ---------- | ------------------------------ |
 | user   | references | null: false, foreign_key: true |
-| room   | references | null: false, foreign_key: true |
+| tweet  | references | null: false, foreign_key: true |
 
 ### Association
 
-- belongs_to :room
+- belongs_to :tweet
 - belongs_to :user
+- validates_uniqueness_of :tweet_id, scope: :user_id
 
-## messages テーブル
+# ローカル動作方法
 
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| message | string     |                                |
-| user    | references | null: false, foreign_key: true |
-| room    | references | null: false, foreign_key: true |
-
-### Association
-
-- belongs_to :room
-- belongs_to :user
+# 開発環境
+Ruby 2.6.5
+Rails 6.0.3.3
+HTML/CSS
+MySQL 5.6.47/SequelPro 1.1.2
+GitHub
+Heroku
+Visual Studio Code 1.49.2
