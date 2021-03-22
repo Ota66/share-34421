@@ -1,4 +1,5 @@
 
+![Videotogif5](https://user-images.githubusercontent.com/78351931/111973279-ac9c6d80-8b41-11eb-8f22-8e4085d8a20e.gif)
 
 # アプリケーション名
 - Shares(シェアーズ)
@@ -55,13 +56,13 @@
 - 動画、テキスト投稿  
 ![Videotogif](https://user-images.githubusercontent.com/78351931/111971090-57f7f300-8b3f-11eb-8ae2-89b8bc330ce0.gif)
 - 投稿編集、削除  
-![Videotogif3](https://user-images.githubusercontent.com/78351931/111970663-d902ba80-8b3e-11eb-8f62-7686bf34f5c5.gif)
+![Videotogif3](https://user-images.githubusercontent.com/78351931/111972387-c25d6300-8b40-11eb-9658-e214ecfad617.gif)
 - ユーザー編集  
-
+![Videotogif5](https://user-images.githubusercontent.com/78351931/111973279-ac9c6d80-8b41-11eb-8f22-8e4085d8a20e.gif)
 - いいねユーザー一覧  
-
+![Videotogif4](https://user-images.githubusercontent.com/78351931/111972815-31d35280-8b41-11eb-9974-7614b1f924c3.gif)
 - ツイート検索  
-![Videotogif2](https://user-images.githubusercontent.com/78351931/111968450-80cab900-8b3c-11eb-8e67-e0c3779fb3af.gif)
+![Videotogif2](https://user-images.githubusercontent.com/78351931/111971787-10be3200-8b40-11eb-8a75-770d273c695d.gif)
 - 工夫した点  
 ①Basic認証や、デプロイする際にID/パスワードをソースコードから見られないように環境変数にしました。  
 ②動画投稿、トップ画像、ヘッター画像を設定出来るようにCarrierWaveのGemを使用しアップロード出来るようにしました。  
