@@ -15,7 +15,7 @@
 # テスト用アカウント
 - Basic認証（ID/Pass)
   ID:mimimi  
-  Pass:222222
+  Pass:pass
 - テスト用アカウント
   NickName:太郎  
   Email:mitu@yahoo.co.jp  
@@ -70,10 +70,12 @@
 # 今後の実装予定機能
 - 個人チャット機能
 - フォロー機能
-- レスポンシブデザイン
+- レスポンシブデザイン  
+- タグ付け機能
 
 # ER図/テーブル表
 
+![erz](https://user-images.githubusercontent.com/78351931/111978869-bfb23c00-8b47-11eb-85ad-cffa55809b1a.png)
 
 ## users テーブル
 
