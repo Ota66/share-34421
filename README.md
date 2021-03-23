@@ -148,9 +148,9 @@
 
 # 開発環境
 Ruby 2.6.5  
-Rails 6.0.3.3  
+Rails 6.0.3.5  
 HTML/CSS  
-MySQL 5.6.47/SequelPro 1.1.2  
+MySQL 5.6.51/SequelPro 1.1.2  
 GitHub  
 Heroku  
 Visual Studio Code 1.49.2  
