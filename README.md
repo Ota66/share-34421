@@ -153,4 +153,4 @@ HTML/CSS
 MySQL 5.6.51/SequelPro 1.1.2  
 GitHub  
 Heroku  
-Visual Studio Code 1.49.2  
+Visual Studio Code 1.53.2  
