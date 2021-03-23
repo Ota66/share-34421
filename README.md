@@ -15,7 +15,7 @@
 # テスト用アカウント
 - Basic認証（ID/Pass)
   ID:mimimi  
-  Pass:222222
+  Pass:pass
 - テスト用アカウント
   NickName:太郎  
   Email:mitu@yahoo.co.jp  
